@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f5f0;  /* Soft warm beige background */
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid gold;  /* Top golden border */
+    border-bottom: 4px solid gold;  /* Bottom golden border */
+    animation: glow 2s ease-in-out forwards;  /* Trigger the glow effect on load */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(255, 223, 0, 0.5),  /* 3D glow effect */
+                 4px 4px 10px rgba(255, 223, 0, 0.3);
+    transition: all 0.3s ease-in-out;  /* Smooth transition for hover effects */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;  /* Smooth color change */
+}
+
+header nav a:hover {
+    color: gold;  /* Hover effect to change link color to gold */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 5px rgba(255, 223, 0, 0),  /* Initial state with no glow */
+                     4px 4px 10px rgba(255, 223, 0, 0);
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(255, 223, 0, 0.5),  /* Final glowing state */
+                     4px 4px 10px rgba(255, 223, 0, 0.3);
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), 
+                url('images2/Reception.JPG') no-repeat center center;
+    background-size: cover;  /* Ensures the image covers the entire section */
+    background-position: center;  /* Keeps the image centered */
+    background-repeat: no-repeat;  /* Prevents image repetition */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;  /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;  /* Center text alignment */
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;  /* Add space below the heading */
+}
+
+.hero p {
+    margin: 10px 0;  /* Add space around the paragraph */
+    font-size: 1.2em;
+}
+
+.cta {
+    margin-top: 20px;  /* Increase space above the button */
+    background-color: #E74C3C;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #C0392B;
+}
+
+/* Glow section  Starts*/
+
+/* Glow Effect for Header */
+.header {
+    transition: text-shadow 0.5s ease; /* Smooth transition for text-shadow */
+}
+
+/* Initial glow state */
+.glow {
+    text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold; /* Glowing effect */
+}
+
+
+/* Glow section ends */
+
+/* About Us Section */
+
+
+.about, .rooms, .dining, .amenities, .gallery, .events, .contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* For hover effect */
+}
+
+.about:hover, .rooms:hover, .dining:hover, .amenities:hover, .gallery:hover, .events:hover, .contact:hover {
+    transform: scale(1.02);
+}
+
+.about h2, .rooms h2, .dining h2, .amenities h2, .gallery h2, .events h2, .contact h2 {
+    font-family: 'Playfair Display', serif, Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.about p, .dining p, .events p, .contact p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 15px; /* Space between paragraphs */
+    line-height: 1.6;
+    color: #555; /* Softer text color */
+}
+
+.about-image {
+    max-width: 100%; /* Responsive width */
+    max-height: 500px; /* Set a maximum height for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Matching the section style */
+    margin: 20px 0; /* Space above and below the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+
+
+/* Rooms Section */
+.room-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room {
+    margin: 20px;
+}
+
+.room img {
+    width: 30px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room h3 {
+    margin-top: 10px;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h3 {
+    color: white;
+    font-size: 2em;
+}
+
+.carousel-caption p {
+    color: white;
+}
+.carousel-item img {
+    width: 100%;
+    height: 350px; /* Smaller height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.carousel-caption p strong {
+    color: gold; /* Change the color for better visibility */
+    font-size: 1.2em; /* Increase font size for rates */
+}
+.carousel-item {
+    height: 400px; /* Set height for the carousel */
+    background-size: cover; /* Cover to ensure it fills the area */
+    background-position: center; /* Center the background image */
+    position: relative; /* Needed for positioning caption */
+}
+
+.carousel-caption {
+    position: absolute; /* Position caption over the image */
+    bottom: 20px; /* Adjust to position */
+    left: 50%;
+    transform: translateX(-50%); /* Center caption */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h3 {
+    color: white;
+    font-size: 2em;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+.carousel-caption p strong {
+    color: gold; /* Highlight the rate */
+    font-size: 1.2em; /* Increase font size for rates */
+}
+
+
+/* Amenities Section */
+.amenities ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Spread items evenly */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+.amenities li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items */
+    margin: 10px; /* Space around items */
+    font-size: 1.2em; /* Increase font size */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    flex-basis: 20%; /* Control how much space each item takes (adjust as needed) */
+    text-align: center; /* Center text under the icons */
+}
+
+.amenities li i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.5em; /* Increase icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effects */
+.amenities li:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.amenities li:hover i {
+    color: #FFD700; /* Change icon color on hover */
+}
+
+
+
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between grid items */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow on hover */
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Prevent scrolling */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+}
+
+.lightbox-img {
+    max-width: 90%; /* Maximum width for the image */
+    max-height: 90%; /* Maximum height for the image */
+}
+
+.close {
+    position: absolute; /* Position the close button */
+    top: 20px;
+    right: 30px;
+    color: white; /* Close button color */
+    font-size: 40px; /* Close button size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+    /*contact  */
+
+    .contact-container {
+        display: flex; /* Enable flexbox */
+        justify-content: space-between; /* Space between the two cards */
+        align-items: flex-start; /* Align items to the top */
+        margin-top: 20px; /* Space above the container */
+        flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    }
+    
+    .contact-card, .map-card {
+        flex: 1; /* Allow both cards to take equal space */
+        margin: 10px; /* Add some margin around the cards */
+        padding: 20px; /* Add padding inside the cards */
+        border: 1px solid #ddd; /* Add a border */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        max-width: 500px; /* Set a max width for larger screens */
+        background-color: #fff; /* Background color */
+    }
+    
+    .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Maintain aspect ratio for responsive design */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contact-details {
+        font-size: 1em; /* Adjust font size */
+    }
+    
+    .contact-details a {
+        text-decoration: none;
+        color: #2C3E50; /* Change this to your desired link color */
+    }
+    
+    .contact-details a i {
+        margin-right: 8px; /* Space between icon and text */
+        font-size: 1.2em; /* Adjust icon size */
+    }
+    
+    .contact-details ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+    }
+    
+    .contact-details ul li {
+        margin: 5px 0; /* Space between social media links */
+    }
+    
